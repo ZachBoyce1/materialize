@@ -2659,7 +2659,7 @@ if (Vel) {
         // we make sure that the indicator is at the end of the tabs
         $this.append($indicator);
 
-        if ($this.is(":visible")) {
+        if ($this.is(":visible") && $active.position()) {
           // $indicator.css({"right": $tabs_width - ((index + 1) * $tab_width)});
           // $indicator.css({"left": index * $tab_width});
           setTimeout(function () {
@@ -2673,7 +2673,7 @@ if (Vel) {
           if (index < 0) {
             index = 0;
           }
-          if ($tab_width !== 0 && $tabs_width !== 0) {
+          if ($tab_width !== 0 && $tabs_width !== 0 && $active.position()) {
             $indicator.css({ "right": calcRightPos($active) });
             $indicator.css({ "left": calcLeftPos($active) });
           }
