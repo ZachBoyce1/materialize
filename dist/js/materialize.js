@@ -4985,8 +4985,10 @@ if (Vel) {
             });
           }
         },
-        'click': function (e) {
+        'mousedown': function (e) {
           e.stopPropagation();
+          e.preventDefault();
+          e.target.focus();
         }
       });
 
